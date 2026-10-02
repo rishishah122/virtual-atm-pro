@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🏦 Virtual ATM Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="toast"></div>
+
+<section id="welcome" class="screen active">
+  <div class="orb"></div>
+  <div class="welcome-card">
+    <div class="logo">🏦</div>
+    <div class="online">● ATM ONLINE</div>
+    <h1>VIRTUAL <span>ATM</span></h1>
+    <p>Professional Banking Simulator</p>
+    <div id="welcomeClock"></div>
+    <button data-action="start" class="main-btn">ENTER ATM →</button>
+    <button data-action="demo" class="sub-btn">👥 DEMO ACCOUNTS</button>
+    <button data-action="about" class="sub-btn">ℹ️ ABOUT</button>
+  </div>
+</section>
+
+<section id="account" class="screen">
+  <button data-action="home" class="back">← BACK</button>
+  <div class="login-card">
+    <div class="big-icon">💳</div>
+    <h2>ENTER ACCOUNT NUMBER</h2>
+    <div id="accountValue" class="display">ENTER ACCOUNT</div>
+    <div class="keypad" id="accountKeys"></div>
+    <button data-action="account-enter" class="main-btn">CONTINUE →</button>
+    <button data-action="demo" class="sub-btn">👥 SELECT DEMO ACCOUNT</button>
+  </div>
+</section>
+
+<section id="pin" class="screen">
+  <button data-action="account-back" class="back">← BACK</button>
+  <div class="login-card">
+    <div class="big-icon">🔐</div>
+    <h2>ENTER 4-DIGIT PIN</h2>
+    <p id="pinUser"></p>
+    <div id="pinValue" class="display pin"></div>
+    <label class="show"><input id="showPin" type="checkbox"> Show PIN</label>
+    <div class="keypad" id="pinKeys"></div>
+    <button data-action="login" class="main-btn">LOGIN →</button>
+    <div id="attempts">3 attempts remaining</div>
+  </div>
+</section>
+
+<section id="demo" class="screen">
+  <button data-action="home" class="back">← HOME</button>
+  <div class="container">
+    <h1>👥 DEMO ACCOUNTS</h1>
+    <p class="muted">Use any account below.</p>
+    <div id="demoList" class="demo-grid"></div>
+  </div>
+</section>
+
+<section id="about" class="screen">
+  <button data-action="home" class="back">← HOME</button>
+  <div class="about-card">
+    <div class="logo">🏦</div>
+    <h1>Virtual ATM Pro</h1>
+    <p>Educational ATM simulator made with HTML, CSS and JavaScript.</p>
+    <div class="creator">
+      <h2>👨‍💻 ABOUT ME</h2>
+      <h1>Rishi Shah</h1>
+      <h3>SYCS Student</h3>
+      <p>Roll No. <b>66</b></p>
+      <p>HTML • CSS • JavaScript</p>
+    </div>
+  </div>
+</section>
+
+<section id="app" class="screen app">
+<header>
+  <b>🏦 VIRTUAL ATM PRO</b>
+  <div>
+    <span id="clock"></span>
+    <button data-action="theme">🌙</button>
+    <button data-action="logout">↪</button>
+  </div>
+</header>
+
+<div class="layout">
+<aside>
+  <div class="profile">
+    <div id="avatar" class="avatar">R</div>
+    <div><b id="sideName"></b><small id="sideAcc"></small></div>
+  </div>
+
+  <nav>
+    <button data-page="dashboard">🏠 Dashboard</button>
+    <button data-page="withdraw">💸 Withdraw</button>
+    <button data-page="deposit">💰 Deposit</button>
+    <button data-page="transfer">🔄 Send Money</button>
+    <button data-page="balance">💳 Balance</button>
+    <button data-page="statement">🧾 Statement</button>
+    <button data-page="card">💳 My Card</button>
+    <button data-page="security">🔐 Security</button>
+    <button data-page="notifications">🔔 Notifications</button>
+    <button data-page="settings">⚙️ Settings</button>
+    <button data-page="help">❓ Help</button>
+    <button data-page="aboutApp">ℹ️ About</button>
+  </nav>
+</aside>
+
+<main id="main"></main>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
